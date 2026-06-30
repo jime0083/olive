@@ -41,11 +41,23 @@
   color: #2a2724;
   font-style: italic;
   text-decoration: none;
-  transition: opacity 0.2s;
+  position: relative;
+  padding-bottom: 4px;
 }
 
-.header__nav-links a:hover {
-  opacity: 0.8;
+.header__nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #BE4A32;
+  transition: width 0.3s ease;
+}
+
+.header__nav-links a:hover::after {
+  width: 100%;
 }
 
 /* Mobile hamburger */
