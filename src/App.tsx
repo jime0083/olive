@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
+import AnimatedHeading from './components/AnimatedHeading';
 
 function App() {
   return (
@@ -13,12 +14,12 @@ function App() {
           className="hero-image"
           style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/Gemini_Generated_Image_pocvq6pocvq6pocv.png)` }}
         ></div>
-        <div className="hero-wordmark">Olion</div>
+        <AnimatedHeading text="Olion" className="hero-wordmark" tag="div" />
       </section>
 
       {/* Story Section */}
       <section id="story" className="story">
-        <h2>Story</h2>
+        <AnimatedHeading text="Story" className="section-heading" />
         <h3>
           近くのことに、<br />
           そっと耳を傾ける。
@@ -38,7 +39,7 @@ function App() {
 
       {/* Policy Section */}
       <section id="policy" className="policy">
-        <h2>Policy</h2>
+        <AnimatedHeading text="Policy" className="section-heading" />
         <div className="policy-grid">
           <div
             className="policy-image"
@@ -70,7 +71,7 @@ function App() {
       {/* About Section */}
       <section id="about" className="about">
         <div className="about-header">
-          <h2>About</h2>
+          <AnimatedHeading text="About" className="section-heading" />
           <div
             className="about-hero-image"
             style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/Gemini_Generated_Image_ktqan4ktqan4ktqa.png)` }}
@@ -165,7 +166,7 @@ function App() {
 
       {/* Media Section */}
       <section id="media" className="media">
-        <h2>Media</h2>
+        <AnimatedHeading text="Media" className="section-heading" />
         <div className="media-grid">
           <div
             className="media-image"
@@ -197,7 +198,7 @@ function App() {
       {/* Contact Section */}
       <section id="contact" className="contact">
         <div className="contact-inner">
-          <h2>Contact</h2>
+          <AnimatedHeading text="Contact" className="section-heading contact-heading" />
           <div className="contact-info">
             <span>Mail : iwata@lion-tax.jp</span>
             <span>Tel : 070 3773 5212</span>
