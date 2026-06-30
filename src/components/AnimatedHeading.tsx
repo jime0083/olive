@@ -5,17 +5,26 @@ interface AnimatedHeadingProps {
   text: string;
   className?: string;
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'div';
+  animateOnLoad?: boolean;
 }
 
 const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
   text,
   className = '',
   tag: Tag = 'h2',
+  animateOnLoad = false,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const headingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (animateOnLoad) {
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+
     const currentRef = headingRef.current;
     const observer = new IntersectionObserver(
       (entries) => {
@@ -41,7 +50,7 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
         observer.unobserve(currentRef);
       }
     };
-  }, []);
+  }, [animateOnLoad]);
 
   const characters = text.split('');
 

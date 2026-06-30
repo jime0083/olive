@@ -14,7 +14,7 @@ function App() {
           className="hero-image"
           style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/Gemini_Generated_Image_pocvq6pocvq6pocv.png)` }}
         ></div>
-        <AnimatedHeading text="Olion" className="hero-wordmark" tag="div" />
+        <AnimatedHeading text="Olion" className="hero-wordmark" tag="div" animateOnLoad />
       </section>
 
       {/* Story Section */}
