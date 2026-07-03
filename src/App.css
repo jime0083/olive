@@ -21,7 +21,7 @@
   bottom: 10vh;
   text-align: left;
   font-family: "Playfair Display", serif;
-  font-size: clamp(120px, 30vw, 450px);
+  font-size: clamp(120px, 28vw, 400px);
   line-height: 1;
   font-weight: 700;
   font-style: italic;
