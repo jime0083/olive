@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/olion-site/static/css/main.374a0e5b.css",
-    "main.js": "/olion-site/static/js/main.04e3cb1e.js",
+    "main.css": "/olion-site/static/css/main.dff3aa33.css",
+    "main.js": "/olion-site/static/js/main.b4805641.js",
     "static/js/453.0c6bcf69.chunk.js": "/olion-site/static/js/453.0c6bcf69.chunk.js",
     "index.html": "/olion-site/index.html",
-    "main.374a0e5b.css.map": "/olion-site/static/css/main.374a0e5b.css.map",
-    "main.04e3cb1e.js.map": "/olion-site/static/js/main.04e3cb1e.js.map",
+    "main.dff3aa33.css.map": "/olion-site/static/css/main.dff3aa33.css.map",
+    "main.b4805641.js.map": "/olion-site/static/js/main.b4805641.js.map",
     "453.0c6bcf69.chunk.js.map": "/olion-site/static/js/453.0c6bcf69.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.374a0e5b.css",
-    "static/js/main.04e3cb1e.js"
+    "static/css/main.dff3aa33.css",
+    "static/js/main.b4805641.js"
   ]
 }
