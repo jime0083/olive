@@ -7,13 +7,23 @@
 
 .animated-heading__char {
   display: inline-block;
-  transform: translateY(100%);
+  transform: translateY(120%);
   opacity: 0;
-  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
-              opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1),
+              opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .animated-heading--visible .animated-heading__char {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Hero wordmark specific animation */
+.hero-wordmark.animated-heading .animated-heading__char {
+  transition-duration: 0.8s;
+}
+
+.hero-wordmark.animated-heading--visible .animated-heading__char {
   transform: translateY(0);
   opacity: 1;
 }
