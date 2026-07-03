@@ -45,7 +45,7 @@ function App() {
             className="policy-image"
             style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/Gemini_Generated_Image_j9cm12j9cm12j9cm.png)` }}
           ></div>
-          <div>
+          <div className="policy-content">
             <div className="policy-item">
               <span className="policy-num">01.</span>
               <div>
@@ -88,7 +88,7 @@ function App() {
         <div className="about-content">
           {/* Greeting */}
           <div className="greeting">
-            <div></div>
+            <div className="greeting-spacer"></div>
             <div className="greeting-text">
               <h3>ご挨拶</h3>
               <p>

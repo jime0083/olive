@@ -16,7 +16,7 @@
 
 .hero-wordmark {
   position: absolute;
-  left: 60px;
+  left: 10%;
   right: 0;
   bottom: 10vh;
   text-align: left;
@@ -32,13 +32,13 @@
 .story {
   background: #be4a32;
   color: #f0e8d8;
-  padding: 96px 60px 80px;
+  padding: 96px 10% 80px;
 }
 
 .story h2 {
   font-family: "Playfair Display", serif;
   margin: 0 0 34px;
-  font-size: clamp(64px, 14vw, 180px);
+  font-size: 88px;
   line-height: 1;
   font-weight: 700;
   font-style: italic;
@@ -47,7 +47,7 @@
 .story h3 {
   font-family: "Playfair Display", serif;
   margin: 0 0 26px;
-  font-size: clamp(18px, 3vw, 26px);
+  font-size: 26px;
   line-height: 1.7;
   font-weight: 500;
   font-style: italic;
@@ -71,13 +71,13 @@
 /* ===== Policy Section ===== */
 .policy {
   background: #f7eee8;
-  padding: 60px 60px 64px;
+  padding: 60px 10% 64px;
 }
 
 .policy h2 {
   font-family: "Playfair Display", serif;
-  margin: 0 0 44px 278px;
-  font-size: clamp(64px, 14vw, 180px);
+  margin: 0 0 44px calc(40% + 48px);
+  font-size: 88px;
   line-height: 1;
   font-weight: 700;
   font-style: italic;
@@ -86,8 +86,7 @@
 
 .policy-grid {
   display: grid;
-  grid-template-columns: 230px 1fr;
-  gap: 48px;
+  grid-template-columns: 40% 60%;
   align-items: start;
 }
 
@@ -96,6 +95,10 @@
   border-radius: 2px;
   background-size: cover;
   background-position: center 30%;
+}
+
+.policy-content {
+  padding-left: 48px;
 }
 
 .policy-item {
@@ -145,8 +148,8 @@
 .about h2 {
   font-family: "Playfair Display", serif;
   margin: 0;
-  padding: 0 0 0 50px;
-  font-size: clamp(64px, 14vw, 180px);
+  padding: 0 0 0 10%;
+  font-size: 88px;
   line-height: 1;
   font-weight: 700;
   font-style: italic;
@@ -165,7 +168,7 @@
 
 .about-hero-text {
   position: absolute;
-  right: 60px;
+  right: 10%;
   top: 50%;
   transform: translateY(-50%);
   max-width: 300px;
@@ -189,16 +192,23 @@
 }
 
 .about-content {
-  padding: 54px 60px 60px;
+  padding: 54px 10% 60px;
 }
 
 /* Greeting */
 .greeting {
   display: grid;
-  grid-template-columns: 230px 1fr;
-  gap: 48px;
+  grid-template-columns: 40% 60%;
   align-items: start;
   margin-bottom: 46px;
+}
+
+.greeting-spacer {
+  /* Empty space for left column */
+}
+
+.greeting-text {
+  padding-left: 48px;
 }
 
 .greeting-text h3 {
@@ -224,15 +234,15 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 230px;
-  height: 280px;
+  width: 384px;
+  height: 563px;
   border-radius: 2px;
   background-size: cover;
   background-position: center top;
 }
 
 .profile-content {
-  margin-left: 278px;
+  margin-left: calc(40% + 48px);
 }
 
 .profile-label {
@@ -260,7 +270,7 @@
 /* Carrier */
 .carrier {
   margin-bottom: 46px;
-  margin-left: 278px;
+  margin-left: calc(40% + 48px);
 }
 
 .carrier-label {
@@ -295,7 +305,7 @@
 
 /* Company */
 .company {
-  margin-left: 278px;
+  margin-left: calc(40% + 48px);
 }
 
 .company-label {
@@ -330,13 +340,13 @@
 /* ===== Media Section ===== */
 .media {
   background: #f7eee8;
-  padding: 30px 60px 70px;
+  padding: 30px 10% 70px;
 }
 
 .media h2 {
   font-family: "Playfair Display", serif;
   margin: 0 0 44px;
-  font-size: clamp(64px, 14vw, 180px);
+  font-size: 88px;
   line-height: 1;
   font-weight: 700;
   font-style: italic;
@@ -345,17 +355,20 @@
 
 .media-grid {
   display: grid;
-  grid-template-columns: 230px 1fr;
-  gap: 48px;
+  grid-template-columns: 40% 60%;
   align-items: start;
 }
 
 .media-image {
-  height: 200px;
+  height: 309px;
   border-radius: 2px;
   margin-top: 6px;
   background-size: cover;
   background-position: center 25%;
+}
+
+.media-content {
+  padding-left: 48px;
 }
 
 .media-content h3 {
@@ -433,7 +446,7 @@
 .contact h2 {
   font-family: "Playfair Display", serif;
   margin: 0 0 28px;
-  font-size: clamp(64px, 14vw, 180px);
+  font-size: 96px;
   line-height: 1;
   font-weight: 700;
   font-style: italic;
@@ -473,26 +486,39 @@
 /* ===== Responsive Styles ===== */
 @media (max-width: 900px) {
   .hero-wordmark {
-    left: 20px;
+    left: 5%;
     text-align: center;
   }
 
   .story {
-    padding: 60px 20px;
+    padding: 60px 5%;
+  }
+
+  .story h2 {
+    font-size: 56px;
+  }
+
+  .story h3 {
+    font-size: 20px;
   }
 
   .policy {
-    padding: 40px 20px;
+    padding: 40px 5%;
   }
 
   .policy h2 {
     margin-left: 0;
     margin-bottom: 24px;
+    font-size: 56px;
   }
 
   .policy-grid {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .policy-content {
+    padding-left: 0;
   }
 
   .policy-image {
@@ -504,26 +530,31 @@
   }
 
   .about h2 {
-    padding-left: 20px;
+    padding-left: 5%;
+    font-size: 56px;
   }
 
   .about-hero-text {
-    right: 20px;
+    right: 5%;
     max-width: 200px;
   }
 
   .about-content {
-    padding: 30px 20px;
+    padding: 30px 5%;
   }
 
   .greeting {
     grid-template-columns: 1fr;
   }
 
+  .greeting-text {
+    padding-left: 0;
+  }
+
   .profile-image {
     position: relative;
     width: 100%;
-    height: 250px;
+    height: 400px;
     margin-bottom: 20px;
   }
 
@@ -550,7 +581,11 @@
   }
 
   .media {
-    padding: 30px 20px 50px;
+    padding: 30px 5% 50px;
+  }
+
+  .media h2 {
+    font-size: 56px;
   }
 
   .media-grid {
@@ -558,14 +593,22 @@
     gap: 24px;
   }
 
+  .media-content {
+    padding-left: 0;
+  }
+
   .media-image {
-    height: 180px;
+    height: 250px;
     margin-top: 0;
   }
 
   .contact-inner {
     border-radius: 60px 60px 0 0 / 60px 60px 0 0;
-    padding: 70px 22px 40px;
+    padding: 70px 5% 40px;
+  }
+
+  .contact h2 {
+    font-size: 64px;
   }
 
   .contact-info {
@@ -588,17 +631,20 @@
   .hero-wordmark {
     font-size: 64px;
     bottom: 5vh;
-    left: 10px;
-    right: 10px;
+    left: 5%;
+    right: 5%;
     text-align: center;
   }
 
   .story h2,
   .policy h2,
   .about h2,
-  .media h2,
+  .media h2 {
+    font-size: 44px;
+  }
+
   .contact h2 {
-    font-size: 64px;
+    font-size: 52px;
   }
 
   .about h2 {
@@ -611,5 +657,9 @@
 
   .about-hero-text {
     display: none;
+  }
+
+  .profile-image {
+    height: 300px;
   }
 }
