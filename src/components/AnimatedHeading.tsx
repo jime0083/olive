@@ -6,6 +6,7 @@ interface AnimatedHeadingProps {
   className?: string;
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'div';
   animateOnLoad?: boolean;
+  triggerAnimation?: boolean;
 }
 
 const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
@@ -13,11 +14,24 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
   className = '',
   tag: Tag = 'h2',
   animateOnLoad = false,
+  triggerAnimation,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const headingRef = useRef<HTMLDivElement>(null);
 
+  // 外部からのトリガー制御
   useEffect(() => {
+    if (triggerAnimation !== undefined && triggerAnimation) {
+      setIsVisible(true);
+    }
+  }, [triggerAnimation]);
+
+  useEffect(() => {
+    // triggerAnimationが指定されている場合は、Intersection Observerを使用しない
+    if (triggerAnimation !== undefined) {
+      return;
+    }
+
     if (animateOnLoad) {
       const timer = setTimeout(() => {
         setIsVisible(true);
@@ -50,7 +64,7 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
         observer.unobserve(currentRef);
       }
     };
-  }, [animateOnLoad]);
+  }, [animateOnLoad, triggerAnimation]);
 
   const characters = text.split('');
 

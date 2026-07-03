@@ -6,9 +6,14 @@ import Loading from './components/Loading';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [heroAnimationReady, setHeroAnimationReady] = useState(false);
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
+    // ローディング完了後、少し遅延してからヒーローアニメーションを開始
+    setTimeout(() => {
+      setHeroAnimationReady(true);
+    }, 300);
   };
 
   return (
@@ -22,7 +27,7 @@ function App() {
           className="hero-image"
           style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/Gemini_Generated_Image_pocvq6pocvq6pocv.png)` }}
         ></div>
-        <AnimatedHeading text="Olive" className="hero-wordmark" tag="div" animateOnLoad />
+        <AnimatedHeading text="Olive" className="hero-wordmark" tag="div" triggerAnimation={heroAnimationReady} />
       </section>
 
       {/* Story Section */}
