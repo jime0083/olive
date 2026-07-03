@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import AnimatedHeading from './components/AnimatedHeading';
+import Loading from './components/Loading';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
   return (
     <div className="App">
+      {isLoading && <Loading onLoadingComplete={handleLoadingComplete} />}
       <Header />
 
       {/* Hero Section */}
