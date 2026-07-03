@@ -1,7 +1,8 @@
 /* ===== Animated Heading ===== */
 .animated-heading {
   display: inline-block;
-  overflow: hidden;
+  overflow: visible;
+  padding-bottom: 0.15em;
 }
 
 .animated-heading__char {
