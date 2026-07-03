@@ -46,7 +46,11 @@ const Header: React.FC = () => {
             scrollToSection('hero');
           }}
         >
-          O&deg;
+          <img
+            src={`${process.env.PUBLIC_URL}/images/olive-logo.svg`}
+            alt="O'lion"
+            className="header__logo-img"
+          />
         </a>
         <div className="header__nav-links">
           {navLinks.map((link) => (

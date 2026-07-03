@@ -30,6 +30,11 @@
   opacity: 0.8;
 }
 
+.header__logo-img {
+  height: 28px;
+  width: auto;
+}
+
 .header__nav-links {
   display: flex;
   gap: 22px;
