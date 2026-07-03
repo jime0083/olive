@@ -24,6 +24,7 @@
   font-size: clamp(120px, 20vw, 300px);
   line-height: 1;
   font-weight: 700;
+  font-style: italic;
   color: #be4a32;
   letter-spacing: 0.01em;
 }
