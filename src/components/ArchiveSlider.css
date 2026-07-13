@@ -1,0 +1,18 @@
+/* ===== Archive Slider ===== */
+.archive-slider {
+  overflow: hidden;
+  width: 100%;
+  background: transparent;
+}
+
+.archive-slider__track {
+  display: flex;
+  will-change: transform;
+}
+
+.archive-slider__slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+}

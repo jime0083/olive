@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import AnimatedHeading from './components/AnimatedHeading';
 import Loading from './components/Loading';
+import ArchiveSlider from './components/ArchiveSlider';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -192,13 +193,7 @@ function App() {
             </p>
             <div className="archive">
               <div className="archive-label">Archive</div>
-              <p className="archive-title">
-                金融機関の友人100人に銀行融資について教わってきました
-              </p>
-              <div className="archive-meta">
-                <span className="archive-date">2022年7月12日 開催</span>
-                <span className="archive-link" style={{ cursor: 'pointer' }}>view more →</span>
-              </div>
+              <ArchiveSlider />
             </div>
             <h3>出版</h3>
             <p>
