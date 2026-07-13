@@ -1,3 +1,12 @@
+/* ===== Section spacing tokens =====
+   セクション間の余白は必ずこの変数を使うこと。
+   各コンテンツセクションは padding: var(--section-space-y) var(--section-space-x)
+   を用い、上下を同じ値にすることで、要素が増減しても常に均一な余白を保つ。 */
+:root {
+  --section-space-y: 80px;
+  --section-space-x: 10%;
+}
+
 /* ===== Hero Section ===== */
 .hero {
   position: relative;
@@ -33,7 +42,7 @@
 .story {
   background: #be4a32;
   color: #f0e8d8;
-  padding: 96px 10% 80px;
+  padding: var(--section-space-y) var(--section-space-x);
 }
 
 .story h2 {
@@ -72,7 +81,7 @@
 /* ===== Policy Section ===== */
 .policy {
   background: #f7eee8;
-  padding: 60px 10% 64px;
+  padding: var(--section-space-y) var(--section-space-x);
 }
 
 .policy h2 {
@@ -151,6 +160,7 @@
 /* ===== About Section ===== */
 .about {
   background: #f7eee8;
+  padding-top: var(--section-space-y);
 }
 
 .about-header {
@@ -214,7 +224,7 @@
 }
 
 .about-content {
-  padding: 54px 10% 60px;
+  padding: var(--section-space-y) var(--section-space-x);
 }
 
 /* Greeting & Profile */
@@ -359,7 +369,7 @@
 /* ===== Media Section ===== */
 .media {
   background: #f7eee8;
-  padding: 30px 10% 70px;
+  padding: var(--section-space-y) var(--section-space-x);
 }
 
 .media h2 {
@@ -384,7 +394,8 @@
 .media-image {
   height: 309px;
   border-radius: 2px;
-  margin-top: 6px;
+  /* 見出しの下部に画像を重ねる（Aboutと同じ被せ表示） */
+  margin-top: -45px;
   background-size: cover;
   background-position: center 25%;
 }
@@ -507,6 +518,11 @@
 
 /* ===== Responsive Styles ===== */
 @media (max-width: 900px) {
+  :root {
+    --section-space-y: 48px;
+    --section-space-x: 5%;
+  }
+
   .hero-wordmark {
     left: 0;
     right: 0;
@@ -516,20 +532,12 @@
     text-align: center;
   }
 
-  .story {
-    padding: 60px 5%;
-  }
-
   .story h2 {
     font-size: 80px;
   }
 
   .story h3 {
     font-size: 20px;
-  }
-
-  .policy {
-    padding: 40px 5%;
   }
 
   .policy h2 {
@@ -574,10 +582,6 @@
     max-width: 200px;
   }
 
-  .about-content {
-    padding: 30px 5%;
-  }
-
   .about-bio {
     grid-template-columns: 1fr;
     row-gap: 20px;
@@ -618,10 +622,6 @@
   .company-item {
     grid-template-columns: 80px 1fr;
     gap: 10px;
-  }
-
-  .media {
-    padding: 30px 5% 50px;
   }
 
   .media h2 {
