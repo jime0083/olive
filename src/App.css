@@ -161,10 +161,19 @@
 }
 
 .about-hero-image {
-  height: 300px;
+  width: 100%;
+  aspect-ratio: 3076 / 1376;
   position: relative;
   background-size: cover;
   background-position: center 30%;
+}
+
+.about-hero-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
 }
 
 .about-hero-text {
@@ -174,6 +183,7 @@
   transform: translateY(-50%);
   max-width: 300px;
   text-align: left;
+  z-index: 1;
 }
 
 .about-hero-text h3 {
@@ -650,10 +660,6 @@
 
   .about h2 {
     transform: translateY(20px);
-  }
-
-  .about-hero-image {
-    height: 200px;
   }
 
   .about-hero-text {
