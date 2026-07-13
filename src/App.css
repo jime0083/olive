@@ -209,19 +209,19 @@
 
 /* Greeting & Profile */
 .about-bio {
+  position: relative;
   display: grid;
   grid-template-columns: 40% 60%;
-  column-gap: 48px;
-  row-gap: 40px;
+  row-gap: 46px;
   align-items: start;
   margin-bottom: 46px;
 }
 
 .about-bio-image {
-  grid-column: 1;
-  grid-row: 1 / span 2;
-  align-self: start;
-  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40%;
   aspect-ratio: 1664 / 2510;
   border-radius: 2px;
   background-size: cover;
@@ -231,6 +231,7 @@
 .greeting-text {
   grid-column: 2;
   grid-row: 1;
+  padding-left: 48px;
 }
 
 .greeting-text h3 {
@@ -250,6 +251,7 @@
 .profile-content {
   grid-column: 2;
   grid-row: 2;
+  padding-left: 48px;
 }
 
 .profile-label {
@@ -556,18 +558,22 @@
   }
 
   .about-bio-image {
+    position: static;
     grid-column: 1;
     grid-row: auto;
+    width: 100%;
   }
 
   .greeting-text {
     grid-column: 1;
     grid-row: auto;
+    padding-left: 0;
   }
 
   .profile-content {
     grid-column: 1;
     grid-row: auto;
+    padding-left: 0;
   }
 
   .carrier {
