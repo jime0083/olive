@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/olive/static/css/main.c7d3d921.css",
+    "main.css": "/olive/static/css/main.1c452346.css",
     "main.js": "/olive/static/js/main.aa79789a.js",
     "static/js/453.0c6bcf69.chunk.js": "/olive/static/js/453.0c6bcf69.chunk.js",
     "index.html": "/olive/index.html",
-    "main.c7d3d921.css.map": "/olive/static/css/main.c7d3d921.css.map",
+    "main.1c452346.css.map": "/olive/static/css/main.1c452346.css.map",
     "main.aa79789a.js.map": "/olive/static/js/main.aa79789a.js.map",
     "453.0c6bcf69.chunk.js.map": "/olive/static/js/453.0c6bcf69.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7d3d921.css",
+    "static/css/main.1c452346.css",
     "static/js/main.aa79789a.js"
   ]
 }
