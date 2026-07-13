@@ -100,21 +100,16 @@ function App() {
         </div>
 
         <div className="about-content">
-          {/* Greeting */}
-          <div className="greeting">
-            <div className="greeting-spacer"></div>
+          {/* Greeting & Profile */}
+          <div className="about-bio">
             <div className="greeting-text">
               <h3>ご挨拶</h3>
               <p>
                 学生時代から簿記の成績は良く、軽い気持ちで志した税理士。始まりは会計事務所のアルバイトから。当時は知識がなく相談を断ることもありましたが、融資について猛勉強し、金融機関に直接連絡をとり一次情報をベースにノウハウを蓄積。気づけば金融機関も私のサポートをしてくれるように。幅広いご相談を一緒に解決したいという思いで日々活動しております。
               </p>
             </div>
-          </div>
-
-          {/* Profile */}
-          <div className="profile">
             <div
-              className="profile-image"
+              className="about-bio-image"
               style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/Gemini_Generated_Image_ed012sed012sed01.png)` }}
             ></div>
             <div className="profile-content">

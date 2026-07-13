@@ -207,20 +207,30 @@
   padding: 54px 10% 60px;
 }
 
-/* Greeting */
-.greeting {
+/* Greeting & Profile */
+.about-bio {
   display: grid;
   grid-template-columns: 40% 60%;
+  column-gap: 48px;
+  row-gap: 40px;
   align-items: start;
   margin-bottom: 46px;
 }
 
-.greeting-spacer {
-  /* Empty space for left column */
+.about-bio-image {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: start;
+  width: 100%;
+  aspect-ratio: 1664 / 2510;
+  border-radius: 2px;
+  background-size: cover;
+  background-position: center top;
 }
 
 .greeting-text {
-  padding-left: 48px;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .greeting-text h3 {
@@ -237,24 +247,9 @@
 }
 
 /* Profile */
-.profile {
-  position: relative;
-  margin-bottom: 46px;
-}
-
-.profile-image {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 40%;
-  aspect-ratio: 1664 / 2510;
-  border-radius: 2px;
-  background-size: cover;
-  background-position: center top;
-}
-
 .profile-content {
-  margin-left: calc(40% + 48px);
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .profile-label {
@@ -555,22 +550,24 @@
     padding: 30px 5%;
   }
 
-  .greeting {
+  .about-bio {
     grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .about-bio-image {
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .greeting-text {
-    padding-left: 0;
-  }
-
-  .profile-image {
-    position: relative;
-    width: 100%;
-    margin-bottom: 20px;
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .profile-content {
-    margin-left: 0;
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .carrier {
