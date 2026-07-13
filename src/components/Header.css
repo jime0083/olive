@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 5%;
+  padding: 18px 5% 18px 10%;
   z-index: 100;
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
@@ -135,6 +135,10 @@
 
 /* ===== Responsive Styles ===== */
 @media (max-width: 900px) {
+  .header {
+    padding: 18px 5%;
+  }
+
   .header__nav-links {
     display: none;
   }
