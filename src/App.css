@@ -93,7 +93,7 @@
 
 .policy-image {
   width: 100%;
-  aspect-ratio: 1664 / 2514;
+  aspect-ratio: 1632 / 816;
   border-radius: 2px;
   background-size: cover;
   background-position: center 30%;
@@ -179,7 +179,9 @@
 
 .about-hero-text {
   position: absolute;
-  right: 10%;
+  /* ご挨拶と左端を揃える: 10%(左padding) + 40%*80%(左カラム) + 48px(テキストpadding) */
+  left: calc(42% + 48px);
+  right: auto;
   top: 50%;
   transform: translateY(-50%);
   max-width: 300px;
@@ -544,7 +546,8 @@
   }
 
   .about-hero-text {
-    right: 5%;
+    left: 5%;
+    right: auto;
     max-width: 200px;
   }
 

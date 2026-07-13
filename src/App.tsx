@@ -57,7 +57,7 @@ function App() {
         <div className="policy-grid">
           <div
             className="policy-image"
-            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/Gemini_Generated_Image_j9cm12j9cm12j9cm.png)` }}
+            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/Policy.png)` }}
           ></div>
           <div className="policy-content">
             <div className="policy-item">
@@ -179,7 +179,7 @@ function App() {
         <div className="media-grid">
           <div
             className="media-image"
-            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/Gemini_Generated_Image_sz8doqsz8doqsz8d.png)` }}
+            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/Media.png)` }}
           ></div>
           <div className="media-content">
             <h3>セミナー</h3>
