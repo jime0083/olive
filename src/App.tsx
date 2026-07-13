@@ -53,11 +53,11 @@ function App() {
 
       {/* Policy Section */}
       <section id="policy" className="policy">
-        <AnimatedHeading text="Policy" className="section-heading" />
         <div className="policy-grid">
+          <AnimatedHeading text="Policy" className="section-heading" />
           <div
             className="policy-image"
-            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/Policy.png)` }}
+            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/Policy2.png)` }}
           ></div>
           <div className="policy-content">
             <div className="policy-item">

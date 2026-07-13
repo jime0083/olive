@@ -76,8 +76,12 @@
 }
 
 .policy h2 {
+  grid-column: 2;
+  grid-row: 1;
   font-family: "Playfair Display", serif;
-  margin: 0 0 44px calc(40% + 48px);
+  margin: 0 0 44px;
+  padding-left: 48px;
+  white-space: nowrap;
   font-size: 160px;
   line-height: 1;
   font-weight: 700;
@@ -86,20 +90,26 @@
 }
 
 .policy-grid {
+  position: relative;
   display: grid;
   grid-template-columns: 40% 60%;
   align-items: start;
 }
 
 .policy-image {
-  width: 100%;
-  aspect-ratio: 1632 / 816;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40%;
+  aspect-ratio: 1632 / 1775;
   border-radius: 2px;
   background-size: cover;
   background-position: center 30%;
 }
 
 .policy-content {
+  grid-column: 2;
+  grid-row: 2;
   padding-left: 48px;
 }
 
@@ -520,8 +530,12 @@
   }
 
   .policy h2 {
+    grid-column: 1;
+    grid-row: auto;
     margin-left: 0;
     margin-bottom: 24px;
+    padding-left: 0;
+    white-space: normal;
     font-size: 80px;
   }
 
@@ -530,7 +544,16 @@
     gap: 24px;
   }
 
+  .policy-image {
+    position: static;
+    grid-column: 1;
+    grid-row: auto;
+    width: 100%;
+  }
+
   .policy-content {
+    grid-column: 1;
+    grid-row: auto;
     padding-left: 0;
   }
 
