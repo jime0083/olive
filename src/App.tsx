@@ -150,7 +150,7 @@ function App() {
             <div className="company-list">
               <div className="company-item">
                 <span className="label">会社名</span>
-                <span className="value">税理士事務所O'lion</span>
+                <span className="value">税理士事務所Olive</span>
               </div>
               <div className="company-item">
                 <span className="label">代表者名</span>
