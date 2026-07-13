@@ -179,9 +179,7 @@
 
 .about-hero-text {
   position: absolute;
-  /* ご挨拶と左端を揃える: 10%(左padding) + 40%*80%(左カラム) + 48px(テキストpadding) */
-  left: calc(42% + 48px);
-  right: auto;
+  right: 10%;
   top: 50%;
   transform: translateY(-50%);
   max-width: 300px;
@@ -546,8 +544,7 @@
   }
 
   .about-hero-text {
-    left: 5%;
-    right: auto;
+    right: 5%;
     max-width: 200px;
   }
 
