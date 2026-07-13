@@ -6,7 +6,7 @@
 
 **✅ デプロイはユーザーの確認を待たずに自動で実行すること（2026-07-13追加）**
 
-- ユーザーは本番環境（https://jime0083.github.io/olion-site）でデザイン・動作を確認する運用のため、修正が完了したら**確認を求めずに**即座にコミット・プッシュ・デプロイまで実行する。
+- ユーザーは本番環境（https://jime0083.github.io/olive）でデザイン・動作を確認する運用のため、修正が完了したら**確認を求めずに**即座にコミット・プッシュ・デプロイまで実行する。
 - 「デプロイしてよいですか？」といった確認は不要。ビルドとTypeScriptチェックが通ったら、そのままデプロイする。
 
 **実装作業が完了したら、必ず以下の手順でGitHub Pagesにデプロイすること：**
@@ -26,7 +26,7 @@ npm run deploy
 ```
 
 **デプロイ後の確認:**
-- 本番URL: https://jime0083.github.io/olion-site
+- 本番URL: https://jime0083.github.io/olive
 - デプロイ完了後、上記URLで動作確認を行うこと
 
 ### デプロイタイミング
@@ -85,7 +85,7 @@ npm run deploy
 - **フレームワーク**: React (Create React App)
 - **言語**: TypeScript
 - **デプロイ先**: GitHub Pages
-- **本番URL**: https://jime0083.github.io/olion-site
+- **本番URL**: https://jime0083.github.io/olive
 
 ## 開発コマンド
 
