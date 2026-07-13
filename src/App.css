@@ -364,12 +364,15 @@
 
 .media h2 {
   font-family: "Playfair Display", serif;
-  margin: 0 0 44px;
+  margin: 0;
   font-size: 160px;
   line-height: 1;
   font-weight: 700;
   font-style: italic;
   color: #be4a32;
+  position: relative;
+  z-index: 4;
+  transform: translateY(40px);
 }
 
 .media-grid {
@@ -680,6 +683,7 @@
   .about h2,
   .media h2 {
     font-size: 56px;
+    transform: translateY(20px);
   }
 
   .contact h2 {
