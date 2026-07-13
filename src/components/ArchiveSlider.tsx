@@ -32,26 +32,27 @@ const items: ArchiveItem[] = [
 const SLIDE_INTERVAL = 3500;
 
 const ArchiveSlider: React.FC = () => {
-  const [index, setIndex] = useState(0);
+  // 先頭に末尾のクローンを追加し、右方向へスライドさせる（実アイテムは index 1 開始）
+  const [index, setIndex] = useState(1);
   const [enableTransition, setEnableTransition] = useState(true);
 
-  // 一定間隔で次のスライドへ自動送り
+  // 一定間隔で前のスライドへ自動送り（右方向へスライド）
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((prev) => prev + 1);
+      setIndex((prev) => prev - 1);
     }, SLIDE_INTERVAL);
     return () => clearInterval(timer);
   }, []);
 
-  // 末尾のクローン（先頭の複製）まで進んだら、トランジションなしで先頭に戻す
+  // 先頭のクローン（末尾の複製）まで進んだら、トランジションなしで実末尾に戻す
   const handleTransitionEnd = () => {
-    if (index === items.length) {
+    if (index === 0) {
       setEnableTransition(false);
-      setIndex(0);
+      setIndex(items.length);
     }
   };
 
-  // トランジション無効化で先頭へ瞬間移動した直後、再度有効化して次回の送りに備える
+  // トランジション無効化で瞬間移動した直後、再度有効化して次回の送りに備える
   useEffect(() => {
     if (!enableTransition) {
       const raf = requestAnimationFrame(() => setEnableTransition(true));
@@ -59,7 +60,7 @@ const ArchiveSlider: React.FC = () => {
     }
   }, [enableTransition]);
 
-  const slides = [...items, items[0]];
+  const slides = [items[items.length - 1], ...items];
 
   return (
     <div className="archive-slider">
