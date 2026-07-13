@@ -25,7 +25,7 @@ function App() {
       <section id="hero" className="hero">
         <div
           className="hero-image"
-          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/Gemini_Generated_Image_pocvq6pocvq6pocv.png)` }}
+          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/first-view.png)` }}
         ></div>
         <AnimatedHeading text="Olive" className="hero-wordmark" tag="div" triggerAnimation={heroAnimationReady} />
       </section>
