@@ -47,7 +47,7 @@ const Header: React.FC = () => {
           }}
         >
           <img
-            src={`${process.env.PUBLIC_URL}/images/olive-logo.svg`}
+            src={`${process.env.PUBLIC_URL}/images/logo-remake.png`}
             alt="O'lion"
             className="header__logo-img"
           />
