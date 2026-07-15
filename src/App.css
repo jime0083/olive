@@ -402,6 +402,8 @@
 
 .media-content {
   padding-left: 48px;
+  /* 左側の画像上部（margin-top: -45px）とグリッドを揃える */
+  margin-top: -45px;
 }
 
 .media-content h3 {
@@ -635,6 +637,7 @@
 
   .media-content {
     padding-left: 0;
+    margin-top: 0;
   }
 
   .media-image {
